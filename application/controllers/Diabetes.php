@@ -29,7 +29,20 @@ class Diabetes extends CI_Controller{
     function insert()  {
         if ($this->input->post()) {
             $data_input_user = $this->input->post();
-            $this->Diabetes_M->insert_pasien($data_input_user);
+            $result = $this->Diabetes_M->insert_pasien($data_input_user);
+                if ($result > 0) {
+                    //sukses
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+                    Success! Data berhasil disimpan
+                </div>
+                ');
+                } else {
+                    //err
+                    $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
+                    Error! Data gagal disimpan
+                </div>
+                ');
+                }
             redirect('diabetes');
         } else {
             $this->load->view('sidebar');

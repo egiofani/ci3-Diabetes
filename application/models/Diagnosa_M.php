@@ -15,6 +15,7 @@ class Diagnosa_M extends CI_Model{
             'diagnosa' => $data['diagnosa'],      
     );
     $this->db->insert('tbl_diagnosa', $data);
+    return $this->db->affected_rows();
     }
 
     function delete($where,$table)  {

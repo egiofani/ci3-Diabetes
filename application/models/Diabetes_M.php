@@ -28,6 +28,7 @@ class Diabetes_M extends CI_Model{
     //         'diagnosis' =>$data['diagnosis'] ,      
     // );
     $this->db->insert('egio_diabetes', $data);
+    return $this->db->affected_rows();
     }
 
     function delete($where,$table)  {

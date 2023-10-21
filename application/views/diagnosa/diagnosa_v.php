@@ -13,7 +13,8 @@
           </button>
         </div>
       </div>
-      <a href="<?php echo base_url('index.php/diagnosa/form') ?>"><button type="button" class="m-2 btn btn-primary">Tambah Data</button></a>
+      <?php echo $this->session->flashdata('pesan'); ?>
+      <a href="<?php echo base_url('diagnosa/form') ?>"><button type="button" class="m-2 btn btn-primary">Tambah Data</button></a>
       <div class="table-responsive small">
       <table class="table table-hover text-center" border="1">
         <thead class="table-dark" >
@@ -29,8 +30,8 @@
                 <td><?= $no++?></td>
                 <td><?= $data->diagnosa?></td>
                 <td>
-                    <a  href="<?php echo base_url('index.php/diagnosa/hapus/'. $data->idDiagnosa); ?>"><button class="btn  btn-sm btn-outline-danger"><i class="m-1 fa-solid fa-trash-can"></i></button></a>
-                    <a href="<?php echo base_url('index.php/diagnosa/update/'. $data->idDiagnosa); ?>"><button class="btn btn-sm btn-outline-primary"><i class=" m-1 fa-regular fa-pen-to-square"></i></button></a>
+                    <a  href="<?php echo base_url('diagnosa/hapus/'. $data->idDiagnosa); ?>"><button class="btn  btn-sm btn-outline-danger"><i class="m-1 fa-solid fa-trash-can"></i></button></a>
+                    <a href="<?php echo base_url('diagnosa/update/'. $data->idDiagnosa); ?>"><button class="btn btn-sm btn-outline-primary"><i class=" m-1 fa-regular fa-pen-to-square"></i></button></a>
                 </td>
             </tr>
             <?php endforeach ?>

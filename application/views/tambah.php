@@ -12,9 +12,9 @@
           </button>
         </div>
       </div>
-      <a href="<?php echo base_url('index.php/diabetes/home') ?>"><button type="button" class="m-2 btn btn-sm btn-outline-danger">kembali</button></a>
+      <a href="<?php echo base_url('diabetes/home') ?>"><button type="button" class="m-2 btn btn-sm btn-outline-danger">kembali</button></a>
       <div class="table-responsive small">
-            <form class="form" method="post" action="<?php echo base_url('index.php/diabetes/insert') ?>">
+            <form class="form" method="post" action="<?php echo base_url('diabetes/insert') ?>">
                 <table class="col-md-8">
                     <tr>
                         <td ><label for="" class="form-label">Nama Pasien</label> </td>

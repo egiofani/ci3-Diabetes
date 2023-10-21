@@ -14,9 +14,9 @@
           </button>
         </div>
       </div>
-      <a href="<?php echo base_url('index.php/diabetes/home') ?>"><button type="button" class="m-2 btn btn-sm btn-outline-danger">kembali</button></a>
+      <a href="<?php echo base_url('diabetes/home') ?>"><button type="button" class="m-2 btn btn-sm btn-outline-danger">kembali</button></a>
       <div class="table-responsive small">
-      <form method="post" action="<?php echo base_url('index.php/diabetes/update') ?>">
+      <form method="post" action="<?php echo base_url('diabetes/update') ?>">
     <table class="col-md-8">
     <?php foreach ($pasien as $data) :?>
         <input type="text" name="IdPasien" value="<?= $data->IdPasien; ?>" hidden>
