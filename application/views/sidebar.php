@@ -240,7 +240,7 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 <?php echo $this->uri->segment(1) == 'mahasiswa' ? 'active' : ''  ?> active" aria-current="page" href="<?php echo base_url('diabetes') ?>">
+              <a class="nav-link d-flex align-items-center gap-2 <?php echo $this->uri->segment(1) == 'diabetes' ? 'active' : ''  ?>" aria-current="page" href="<?php echo base_url('diabetes') ?>">
               <i class="fa-solid fa-hospital"></i>
                 Dashboard
               </a>
